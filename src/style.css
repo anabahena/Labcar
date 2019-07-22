@@ -475,6 +475,97 @@ footer {
         padding: 1px;
     }
 
+
+    .three-section {
+        background-image: url(img/conduce.jpg);
+        height: 75vh;
+        background-size: cover;
+        background-position: center bottom;
+        margin: 0px 0px;
+        color: white;
+        display: flex;
+        background-position: center center;
+        justify-content: flex-end;
+        align-items: initial;
+    }
+
+    .conduce-mobile {
+        background-color: rgba(27, 27, 30, 0.8);
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 1rem;
+        width: 40%;
+    }
+
+    .four-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 80vh;
+        background-color: #f7b617;
+    }
+    .four-mobile {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+    .mapa {
+        width: fit-content;
+    }
+
+    .four-section h2 {
+        margin: 0px;
+    }
+    
+    .elements-map {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0rem;
+        /* align-items: center; */
+        justify-content: center;
+        color: white;
+        width: 90%;
+    }
+    
+    ::placeholder {
+        color: white;
+    }
+    
+    .elements-map input {
+        margin: 1rem;
+        border-radius: 5px;
+        border: none;
+        border: 1px solid white;
+        background-color: transparent;
+        width: 70%;
+        padding: 0.3rem;
+    }
+
+    .ruta {
+        display: flex;
+        justify-content: center;
+    }
+
+    .conduce-mobile input {
+        color: white;
+        
+        margin: 1rem 0;
+        align-self: flex-start;
+    }
+    
+    .conduce-mobile input:hover {
+        color: black;
+        background-color: #f7b617;
+    }
+
+    footer {
+        background: #2b2b2b;
+    
+    }
+
+
     .info2, .info {
         display: none;
     }
