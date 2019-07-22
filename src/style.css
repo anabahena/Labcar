@@ -1,23 +1,37 @@
-*{
-    margin: 0;
-    padding: 0;
+@font-face {
+    font-family: 'icomoon';
+    src: url('./fonts/icomoon.eot?lwlfc0');
+    src: url('./fonts/icomoon.eot?lwlfc0#iefix') format('embedded-opentype'), url('./fonts/icomoon.ttf?lwlfc0') format('truetype'), url('./fonts/icomoon.woff?lwlfc0') format('woff'), url('./fonts/icomoon.svg?lwlfc0#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #444444;
+}
 
 .container {
 margin: 0;
 padding: 0;
 }
 
-.contenido, .header, .pie-pagina .containerLateral{
+.header, .footer{
 padding: 1em,2em;
 }
 
-.contenido, .containerLateral, .pie-pagina{
-float: left;
-box-sizing: border-box;
-}
+
 
 .header{
 height: 100px;
@@ -45,40 +59,39 @@ header nav ul li{
 }
 
 header nav ul li a {
- padding: 20px;
+ margin: 0;
+ padding: 5px;
  display: inline-block;
  text-decoration: none;
  font-family: 'Times New Roman', Times, serif;
+ color: black
 }
 
 header nav ul li a:hover {
-background: green;
-}
-.contenido{
-width: 100%;
-height: 100px;
+background: #f7b617;
 }
 
-.pie-pagina{
-    width: 100%;
-    height: 20%;
-    background: #2b2b2b; 
-}
 
 .navbar{
     align-content: right;
 }
 
 
-@media only screen and (max-width: 768px) and (min-width: 320px) {  
-.logo{
-    width: 15%;
-    height: 30%;
-}
 
-.img-taxi{
-    width: 100%;
-    height: 500%;
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) and (min-width: 320px) {  
+
+    .logo{
+    width: 20%;
+    height: 30%;
+    margin: 2px;
+    padding: 0px;
 }
 
 header nav{
@@ -91,22 +104,229 @@ header nav{
 header nav ul li{
     display: block;
     float: none;
-    border-bottom:1px solid rgba(225, 255, 255, .3)
+    border-bottom:1px solid rgba(225, 255, 255, .3);
+    background: #f7b617;
+    align-content: center
+
 }
 
 .menuDes{
     display: block;
     width: 100%;
-    background:red;
+    margin: 5px;
+    padding: 5px;
 }
 
 .menuDes span {
     float: left;
     font-size: 20px;
 }
+
+.first-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url(IMG/taxi.jpg);
+    height: 85vh;
+    background-size: cover;
+    background-position: center bottom;
+    margin: 0px 0px;
 }
 
-@media only screen and (max-width: 2560px) and (min-width: 780px){
+.info {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    background-color: #f7b617;
+    color: white;
+    padding: 2rem;
+    width: 80%;
+    height: 250px;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.info {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.info h2 {
+    font-size: 2rem;
+    margin: 0.2rem 0px;
+}
+
+.button {
+    padding: 0.8rem;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 1rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    color: #444444;
+}
+.buttons:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    color: #f7b617;
+}
+
+.second-section {
+    height: 100vh;
+    background-color: #f7b617;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.info2 div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid white;
+    height: 80vh;
+    width: 90%;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 1rem auto;
+}
+.info2 span {
+    padding: 1rem;
+}
+
+.three-section{
+    background-image: url(img/conduce.jpg);
+    height: 75vh;
+    background-size: cover;
+    background-position: center bottom;
+    margin: 0px 0px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.conduce-mobile {
+    height: fit-content;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+.conduce-mobile h3,
+.conduce-mobile p {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.conduce-mobile h3 {
+    font-weight: bold;
+    margin: 0.5rem 0rem;
+}
+
+.conduce-mobile input {
+    color: white;
+    background-color: #f7b617;
+    margin: 1rem 0;
+    align-self: flex-start;
+}
+
+.conduce-mobile input:hover {
+    color: black;
+    background-color: #f7b617;
+}
+
+.four-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f7b617;
+    height: 120vh;
+    color: white;
+    margin: 0;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.four-section h2{
+    margin: 0;
+}
+
+.elements-map{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0rem;
+    justify-content: center;
+    color: white;
+    width: 90%;
+}
+
+::placeholder{
+    color: white;
+}
+
+
+.mapa{
+    border: 1px solid white;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+
+}
+
+.ruta {
+    display: flex;
+    justify-content: center;
+}
+
+.logos, .derechos{
+    width: 100%;
+    margin: 0.5rem 0rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    height: fit-content;
+    font-size: 0.8rem;
+
+}
+
+
+.contenido{
+
+    display: flex;
+}
+
+footer {
+    background: #2b2b2b;
+
+}
+
+
+
+.info-desktop, .info2-desktop, .info-app {
+    display: none;
+}
+
+}
+
+
+
+
+
+
+@media only screen and (max-width: 2560px) and (min-width: 769px){
     
     .logo-Lab{
     width: 50%;
@@ -114,25 +334,26 @@ header nav ul li{
     }
 
     .logo{
-        width: 12%;
-        height: 6%;
+        width: 20%;
+        height: 12%;
         position: absolute;
-        margin: 0;
-        padding: 0;
+        margin: 20px;
+        padding: 20px;
     }
 
     .navbar{
         float: right;;
         width: 50%;
-        margin: 0;
-        padding: 0;
-        
+        margin: 10px;
+        padding: 10px; 
     }
+
     .nav{
         float: right;
         margin: 0;
         padding: 0;
         font-size: 16px;
+        font-size: 20px;
     }
 
     .lista{
@@ -140,8 +361,123 @@ header nav ul li{
         margin: 8px;
     }
 
+    .button {
+        padding: 0.8rem;
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 1rem;
+        margin-right: 2rem;
+        margin-top: 1rem;
+        color: #444444;
+    }
+
+    .buttons:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+        color: #f7b617;
+    }
+
+    .first-section {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-image: url(IMG/taxi.jpg);
+        width: 180vh;
+        height: 180vh;
+        background-size: cover;
+        background-position: center bottom;
+        margin: 0px 0px;
+    }
+
+    .info-desktop {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        background-color: #f7b617;
+        color: white;
+        padding: 2rem;
+        width: 80%;
+        height: 250px;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .info-desktop {
+        padding: 2rem;
+        display: block;
+        justify-content: flex-end;
+        width: 500px;
+        height: 400px;
+    }
+    .info-desktop h3,
+    span {
+        font-size: 1.5rem;
+    }
+
+    .title {
+        position: relative;
+        text-align: center;
+        background: #f7b617;
+        margin: 1.5rem;
+    }
+    .text {
+        position: relative;
+        background-color: #f7b617;
+        color: white;
+        padding: 0 3rem;
+        z-index: 1;
+        font-size: 1rem;
+    }
+    .divider {
+        position: absolute;
+        background-color: white;
+        border: none;
+        width: 100%;
+        height: 2px;
+        z-index: 0;
+    }
+
+
+
+    .second-section {
+        height: 100vh;
+        background-color: #f7b617;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+   
     
 
+    .info2-desktop {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid white;
+        margin: 0px;
+        padding: 5px 0;
+        width: 80%;
+    }
+    .info2-desktop h3 {
+        margin: 0;
+    }
+
+    .info-app {
+        display: block;
+        width: 50%;
+        font-size: 1.5rem;
+        font-weight: 200;
+        padding: 1px;
+    }
+
+    .info2, .info {
+        display: none;
+    }
 
 
 }
